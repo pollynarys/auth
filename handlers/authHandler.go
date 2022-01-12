@@ -30,7 +30,7 @@ func Register(c *fiber.Ctx) error {
 		EncryptedPassword: password,
 	}
 
-	repository.DB.Create(user)
+	repository.DB.Create(&user)
 
 	return c.JSON(user)
 }

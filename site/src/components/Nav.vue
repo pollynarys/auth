@@ -6,7 +6,7 @@
       </li>
     </ul>
 
-    <ul v-if="!auth">
+    <ul v-if=auth>
       <li>
         <router-link to="/login">LOGIN</router-link>
       </li>
@@ -15,7 +15,7 @@
       </li>
     </ul>
 
-    <ul v-if="auth">
+    <ul v-if=auth>
       <li>
         <a href="#" @click="logout">LOGOUT</a>
       </li>

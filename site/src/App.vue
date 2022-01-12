@@ -91,7 +91,7 @@ input {
   margin-bottom: 1em;
 }
 
-.auth input {
+.authorize input {
   text-align: center;
   height: 2em;
   width: 100%;
@@ -100,11 +100,11 @@ input {
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
-.auth input:hover {
+.authorize input:hover {
   background-color: #ccc;
 }
 
-.auth input:focus {
+.authorize input:focus {
   border: 0;
   background-color: #fff;
   font-weight: 600;
@@ -119,13 +119,8 @@ input[type="submit"] {
   border-radius: 10px;
 }
 
-input[type="submit"] :active {
+input[type="submit"]:active {
   font-weight: 600;
-}
-
-.checkbox {
-  text-align: left;
-  font-size: .7em;
 }
 
 </style>

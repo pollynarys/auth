@@ -2,15 +2,12 @@
   <fieldset>
     <legend>Please register</legend>
     <form @submit.prevent="submit">
-      <div class="auth">
+      <div class="authorize">
         <input v-model="data.name" placeholder="Name" required>
         <input v-model="data.email" type="email" placeholder="Email address" required>
         <input v-model="data.password" type="password" placeholder="Password" required>
       </div>
-      <div class="checkbox">
-        <label><input type="checkbox" value="Remember-me">Remember me</label>
-        <input type="submit" name="submit" value="submit">
-      </div>
+      <input type="submit" name="submit" value="submit">
     </form>
   </fieldset>
 </template>
@@ -30,7 +27,7 @@ export default {
     const router = useRouter();
 
     const submit = async () => {
-      await fetch('http://localhost:8000/register', {
+      await fetch('http://localhost:8000/api/register', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)

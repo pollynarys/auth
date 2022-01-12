@@ -19,7 +19,7 @@ export default {
           credentials: 'include',
         });
         const content = await response.json();
-        message.value = `Welcome home ${content.name}`;
+        message.value = `Welcome ${content.name}`;
 
         await store.dispatch('setAuth', true);
       } catch (e) {
