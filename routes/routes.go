@@ -8,4 +8,6 @@ import (
 func Setup(app *fiber.App) {
 	app.Post("/api/register", handlers.Register)
 	app.Post("/api/login", handlers.Login)
+	app.Post("/api/logout", handlers.Logout)
+	app.Get("/api/user", handlers.GetUser)
 }

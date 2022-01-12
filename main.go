@@ -8,11 +8,14 @@ import (
 )
 
 func main() {
-	repository.Open()
+	if err := repository.Open(); err != nil {
+		log.Fatalf("Database connection error: %v", err)
+	}
 
 	app := fiber.New()
 	routes.Setup(app)
 
-	log.Println("start serv")
-	app.Listen(":8000")
+	if err := app.Listen(":8000"); err != nil {
+		log.Fatalf("Internal Server Error: %v", err)
+	}
 }
