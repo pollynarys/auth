@@ -1,24 +1,22 @@
 <template>
   <nav>
-    <ul>
+    <ul class="nav">
       <li>
         <router-link to="/">MAIN</router-link>
       </li>
-    </ul>
-
-    <ul v-if=auth>
+      <!--      <ul v-if="auth">-->
       <li>
         <router-link to="/login">LOGIN</router-link>
       </li>
       <li>
         <router-link to="/register">REGISTER</router-link>
       </li>
-    </ul>
-
-    <ul v-if=auth>
+      <!--      </ul>-->
+      <!--      <ul v-if="!auth">-->
       <li>
         <a href="#" @click="logout">LOGOUT</a>
       </li>
+      <!--      </ul>-->
     </ul>
   </nav>
 </template>

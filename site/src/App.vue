@@ -39,13 +39,13 @@ h1 {
   clear: both;
 }
 
-header li {
+li {
   padding: 0.5em;
   margin: 0;
   display: inline-block;
 }
 
-header a {
+a, router-link {
   padding: 0.5em;
   display: block;
 }
@@ -59,7 +59,7 @@ a:hover {
   color: #dc6454;
 }
 
-nav ul li {
+li {
   list-style-type: none;
 }
 
@@ -76,16 +76,6 @@ fieldset {
   text-align: left;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
-
-/*ul {*/
-/*  margin: 0;*/
-/*  padding: 0;*/
-/*}*/
-
-/*li {*/
-/*  margin: 1em;*/
-/*  list-style: none;*/
-/*}*/
 
 input {
   margin-bottom: 1em;
